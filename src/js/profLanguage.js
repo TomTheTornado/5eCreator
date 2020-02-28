@@ -165,6 +165,21 @@ function getRaceLanguages(){
     }
 }
 
+function getLang(){
+    switch(race){
+        case "dwarf": return "Dwarvish and Common";
+        case "elf": return "Elvish and Common";
+        case "halfling": return "Halfling and Common";
+        case "human": return "and Common";
+        case "dragonborn": return "Draconic and Common";
+        case "gnome": return "Gnomish and Common";
+        case "halfElf": return "Elvish and Common";
+        case "halfOrc": return "Orc and Common";
+        case "tiefling": return "Infernal and Common";
+        default: return ""; break;
+    }
+}
+
 function exRaceLang(){
     switch(race){
         case "human": return 1;
@@ -203,10 +218,20 @@ function numClassProf(){
 }
 
 function saveProfLang(){
-    //get number of proficiencies
-    //loop through to get elements from html
-    //add elements to proficiencies
 
+    for(var i = 0; i < numClassProf(); i++){
+        var prof = "cProf" + (i+1);
+        proficiencies = proficiencies + document.getElementById(prof).value + ",";
+    }
+    proficiencies = proficiencies + " " + getBackgroundProf();
+    localStorage.setItem('skillProf', proficiencies);
 
-    //do the same thing above but now with languages
+    for(var i = 0; i < (exRaceLang() + exBackLang()); i++){
+        var lang = "exLang" + (i+1);
+        languages = languages + document.getElementById(lang).value + ",";
+    }
+    languages = languages + " " + getLang();
+    localStorage.setItem('languages', languages);
+
+    window.location.href="./abilityHP.html";
 }
