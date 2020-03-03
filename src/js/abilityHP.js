@@ -24,17 +24,16 @@ function chosenScores(){
     var element = document.getElementById("div1");
     element.appendChild(para);
 
-    document.getElementById("div1").innerHTML = getLvl1HP();
-    
+    document.getElementById("div2").innerHTML = getHPPrompt();
 }
 
 function updateScoreMod(){
-    document.getElementById("strMod").innerHTML = getAbilityScore("str");
-    document.getElementById("dexMod").innerHTML = getAbilityScore("dex");
-    document.getElementById("conMod").innerHTML = getAbilityScore("con");
-    document.getElementById("intMod").innerHTML = getAbilityScore("int");
-    document.getElementById("wisMod").innerHTML = getAbilityScore("wis");
-    document.getElementById("chaMod").innerHTML = getAbilityScore("cha");
+    document.getElementById("strMod").innerHTML = getAbilityScores("str");
+    document.getElementById("dexMod").innerHTML = getAbilityScores("dex");
+    document.getElementById("conMod").innerHTML = getAbilityScores("con");
+    document.getElementById("intMod").innerHTML = getAbilityScores("int");
+    document.getElementById("wisMod").innerHTML = getAbilityScores("wis");
+    document.getElementById("chaMod").innerHTML = getAbilityScores("cha");
 }
 
 function raceScoreIncrease(){
@@ -67,7 +66,7 @@ function subRaceScoreIncrease(){
     }
 }
 
-function getAbilityScore(ability){
+function getAbilityScores(ability){
     switch(ability){
         case "str": return getScoreModifier(document.getElementById("strScore").value);
         case "dex": return getScoreModifier(document.getElementById("dexScore").value);
@@ -101,20 +100,51 @@ function getScoreModifier(score){
     }
 }
 
-function getLvl1HP(){
+function getHPPrompt(){
     switch(chtrClass){
-        case "barbarian": return "As a barbarian, your level 1 HP is ";
-        case "bard": return 3;
-        case "cleric": return 2;
-        case "druid": return 2;
-        case "fighter": return 2;
-        case "monk": return 2;
-        case "paladin": return 2;
-        case "ranger": return 3;
-        case "rogue": return 4;
-        case "sorcerer": return 2;
-        case "warlock": return 2;
-        case "wizard": return 2;
+        case "barbarian": return "As a barbarian, your level 1 HP is 12 + your constitution modifier.";
+        case "bard": return "As a bard, your level 1 HP is 8 + your constitution modifier.";
+        case "cleric": return "As a cleric, your level 1 HP is 8 + your constitution modifier.";
+        case "druid": return "As a druid, your level 1 HP is 8 + your constitution modifier.";
+        case "fighter": return "As a fighter, your level 1 HP is 10 + your constitution modifier.";
+        case "monk": return "As a monk, your level 1 HP is 8 + your constitution modifier.";
+        case "paladin": return "As a paladin, your level 1 HP is 10 + your constitution modifier.";
+        case "ranger": return "As a ranger, your level 1 HP is 10 + your constitution modifier.";
+        case "rogue": return "As a rogue, your level 1 HP is 8 + your constitution modifier.";
+        case "sorcerer": return "As a sorcerer, your level 1 HP is 6 + your constitution modifier.";
+        case "warlock": return "As a warlock, your level 1 HP is 8 + your constitution modifier.";
+        case "wizard": return "As a wizard, your level 1 HP is 6 + your constitution modifier.";
         default: break;
+    }
+}
+
+function getBaseHP(){
+    switch(chtrClass){
+        case "barbarian": return 12;
+        case "bard": return 8;
+        case "cleric": return 8;
+        case "druid": return 8;
+        case "fighter": return 10;
+        case "monk": return 8;
+        case "paladin": return 10;
+        case "ranger": return 10;
+        case "rogue": return 8;
+        case "sorcerer": return 6;
+        case "warlock": return 8;
+        case "wizard": return 6;
+        default: break;
+    }
+}
+
+function getLvl1HP(){
+    var conScore = document.getElementById("conScore").value;
+    var conMod = getScoreModifier(conScore);
+    var numMod = parseInt(conMod, 10);
+    var HP = getBaseHP() + numMod;
+    if(numMod >= -5 && numMod <= 10){
+        document.getElementById("baseHP").innerHTML = HP;
+    }
+    else{
+        document.getElementById("baseHP").innerHTML = "";
     }
 }
