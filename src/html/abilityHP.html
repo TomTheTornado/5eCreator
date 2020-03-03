@@ -8,17 +8,17 @@
     <form>
         <p><b>Ability Scores</b></p>
         <div id="div1"></div>
-        <p>Strength <input type="text" id="strScore" value=></p>
-        <p>Dexterity <input type="text" id="dexScore" value=></p>
-        <p>Constitution <input type="text" id="conScore" value=></p>
-        <p>Intelligence <input type="text" id="intScore" value=></p>
-        <p>Wisdom <input type="text" id="wisScore" value=></p>
-        <p>Charisma <input type="text" id="chaScore" value=></p>
+        <p>Strength <input type="text" id="strScore" oninput="updateScoreMod()" value=> &nbsp;&nbsp;&nbsp;&nbsp; Str Mod: <span id="strMod"></span></p>
+        <p>Dexterity <input type="text" id="dexScore" oninput="updateScoreMod()" value=>  &nbsp;&nbsp;&nbsp;&nbsp; Dex Mod: <span id="dexMod"></span></p>
+        <p>Constitution <input type="text" id="conScore" oninput="updateScoreMod()" value=> &nbsp;&nbsp;&nbsp;&nbsp; Con Mod: <span id="conMod"></span></p>
+        <p>Intelligence <input type="text" id="intScore" oninput="updateScoreMod()" value=> &nbsp;&nbsp;&nbsp;&nbsp; Int Mod: <span id="intMod"></span></p>
+        <p>Wisdom <input type="text" id="wisScore" oninput="updateScoreMod()" value=> &nbsp;&nbsp;&nbsp;&nbsp; Wis Mod: <span id="wisMod"></span></p>
+        <p>Charisma <input type="text" id="chaScore" oninput="updateScoreMod()" value=> &nbsp;&nbsp;&nbsp;&nbsp; Cha Mod: <span id="chaMod"></span></p>
         <br>
 
-        <p><b>Hit Points</b></p>
+        <p><b>Base Hit Points at Level 1</b></p>
         <div id="div2"></div>
-        <input type="text" id="HP" value=>
+        <p>HP at Level 1: <span id="baseHP"></span></p>
         <br>
         <br>
         <input type="button" onclick="" value="Submit">
