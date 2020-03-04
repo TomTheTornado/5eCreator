@@ -233,5 +233,5 @@ function saveProfLang(){
     languages = languages + " " + getLang();
     localStorage.setItem('languages', languages);
 
-    window.location.href="./abilityHP.html";
+    window.location.href="./abilityHP.html"; 
 }
