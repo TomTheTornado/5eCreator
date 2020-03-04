@@ -3,7 +3,7 @@
     <head>
         <title>Page title</title>
     </head>
-<body onload="chosenScores()">
+<body onload="chosenScores();updateScoreMod();getLvl1HP()">
     <h1>DnD 5e Character Creator</h1>
     <form>
         <p><b>Ability Scores</b></p>
@@ -18,10 +18,10 @@
 
         <p><b>Base Hit Points at Level 1</b></p>
         <div id="div2"></div>
-        <p>HP at Level 1: <span id="baseHP"></span></p>
+        <p>HP at Level 1: <span id="baseHP" value=></span></p>
         <br>
         <br>
-        <input type="button" onclick="" value="Submit">
+        <input type="button" onclick="saveAbilityHP()" value="Submit">
     </form>
 </body>
     <script src="../js/abilityHP.js"></script>

@@ -3,7 +3,7 @@ var subRace = "";
 var chtrClass = "";
 
 function chosenScores(){
-    document.getElementById("div1").innerHTML = "To calculate your basic ability scores either roll 4d6, \
+    document.getElementById("div1").innerHTML = "To calculate your basic ability scores roll 4d6, \
         subtract the lowest die value, and do that for each score. On the other hand, you can use the \"standard array\" \
         which use the numbers 15, 14, 13, 12, 10, and 8.";
 
@@ -140,11 +140,39 @@ function getLvl1HP(){
     var conScore = document.getElementById("conScore").value;
     var conMod = getScoreModifier(conScore);
     var numMod = parseInt(conMod, 10);
+    localStorage.setItem('conMod', numMod);
+
     var HP = getBaseHP() + numMod;
     if(numMod >= -5 && numMod <= 10){
+        document.getElementById("baseHP").value = HP;
         document.getElementById("baseHP").innerHTML = HP;
     }
     else{
+        document.getElementById("baseHP").value = "";
         document.getElementById("baseHP").innerHTML = "";
+    }
+}
+
+function saveAbilityHP(){
+    var str = document.getElementById("strScore").value;
+    var dex = document.getElementById("dexScore").value;
+    var con = document.getElementById("conScore").value;
+    var intS = document.getElementById("intScore").value;
+    var wis = document.getElementById("wisScore").value;
+    var cha = document.getElementById("chaScore").value;
+    var HP =  document.getElementById("baseHP").value;
+    if((str > 0 && str < 31) && (dex > 0 && dex < 31) && (con > 0 && con < 31) && (intS > 0 && intS < 31)
+      && (wis > 0 && wis < 31) && (cha > 0 && cha < 31) && (HP > 0 && HP < 23)){
+        localStorage.setItem('str', str);
+        localStorage.setItem('dex', dex);
+        localStorage.setItem('con', con);
+        localStorage.setItem('intS', intS);
+        localStorage.setItem('wis', wis);
+        localStorage.setItem('cha', cha);
+        localStorage.setItem('HP', HP);
+        window.location.href="./alignment.html"; 
+    }
+    else{
+        alert("Not all scores are valid.");
     }
 }
