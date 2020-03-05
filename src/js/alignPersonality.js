@@ -26,19 +26,21 @@ function chosenBackground(){
 function removeRenameExRoll(){
     var div = document.getElementById('exRollName');
     switch(background){
-        case "charlatan": link += "charlatan"; break;
-        case "criminal": link += "criminal"; break;
-        case "entertainer": link += "entertainer"; break;
-        case "folkHero": link += "folk-hero"; break;
-        case "artisan": link += "guild-artisan"; break;
-        case "hermit": link += "hermit"; break;
-        case "outlander": link += "outlander"; break;
-        case "sage": link += "sage"; break;
-        case "urchin": link += "urchin"; break;
+        case "charlatan": div.innerHTML = "Scam"; break;
+        case "entertainer": div.innerHTML = "Routine"; break;
+        case "folkHero": div.innerHTML = "Defining Event"; break;
+        case "artisan": div.innerHTML = "Guild Business"; break;
+        case "hermit": div.innerHTML = "Life of Seclusion"; break;
+        case "outlander": div.innerHTML = "Origin"; break;
+        case "soldier": 
+        case "sage":
+        case "criminal": 
+            div.innerHTML = "Specialty"; 
+            break;
+        case "urchin":
         case "acolyte":
         case "noble":
         case "sailor": 
-        case "soldier": 
             div.parentNode.removeChild(div); 
             var div2 = document.getElementById('exRoll');
             div2.parentNode.removeChild(div2);
@@ -55,22 +57,21 @@ function saveCharacteristics(){
     var flaw =  document.getElementById("flaw").value;
     var temp = true;
     
-    if(background != "soldier" && background != "sailor" && background != "noble" && background != "acolyte"){
+    if(background != "urchin" && background != "sailor" && background != "noble" && background != "acolyte"){
         var exRoll =  document.getElementById("exRoll").value;
         if(exRoll == ""){
             temp = false;
         }
         else{
-            //local storage
+            localStorage.setItem('exRoll', exRoll);
         }
     }
     if(trait != "" && ideal != "" && bond != "" && flaw != "" && temp && alignment != ""){
-        //save and '
-        //localStorage.setItem('exRoll', exRoll);
-        //localStorage.setItem('', intS);
-        // localStorage.setItem('wis', wis);
-        // localStorage.setItem('cha', cha);
-        // localStorage.setItem('HP', HP);
+        localStorage.setItem('alignment', alignment);
+        localStorage.setItem('trait', trait);
+        localStorage.setItem('ideal', ideal);
+        localStorage.setItem('bond', bond);
+        localStorage.setItem('flaw', flaw);
         window.location.href="./weaponArmor.html"; 
     }
     else{
