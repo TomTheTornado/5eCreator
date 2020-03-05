@@ -72,7 +72,7 @@ function saveCharacteristics(){
         localStorage.setItem('ideal', ideal);
         localStorage.setItem('bond', bond);
         localStorage.setItem('flaw', flaw);
-        window.location.href="./weaponArmor.html"; 
+        window.location.href="./equipmentGold.html"; 
     }
     else{
         alert("Not all fields are filled out.");
