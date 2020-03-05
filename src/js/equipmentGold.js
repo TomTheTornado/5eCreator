@@ -74,10 +74,5 @@ function saveEquipGold(){
     localStorage.setItem('equipment', equipment);
     localStorage.setItem('gold', gold);
     var level = localStorage.getItem('level');
-    if(level == 1){
-        window.href = location.href="./personality.html";
-    }
-    else{
-        //go to beyond level 2 page
-    }
+    window.href = location.href="./physical.html";
 }
