@@ -1,0 +1,31 @@
+{
+    "Alignment":[{
+        "alignmentID":"1",
+        "alignmentName":"Lawful Good"
+    },{
+        "alignmentID":"2",
+        "alignmentName":"Neutral Good"
+    },{
+        "alignmentID":"3",
+        "alignmentName":"Chaotic Good"
+    },{
+        "alignmentID":"4",
+        "alignmentName":"Lawful Neutral"
+    },{
+        "alignmentID":"5",
+        "alignmentName":"True Neutral"
+    },{
+        "alignmentID":"6",
+        "alignmentName":"Chaotic Neutral"
+    },{
+        "alignmentID":"7",
+        "alignmentName":"Lawful Evil"
+    },{
+        "alignmentID":"8",
+        "alignmentName":"Neutral Evil"
+    },{
+        "alignmentID":"9",
+        "alignmentName":"Chaotic Evil"
+    },{
+    }]
+}
