@@ -16,3 +16,11 @@ function physicalLink(){
     link += "#toc0";
     document.getElementById("raceLink").href = link;
 }
+
+function savePhysical(){
+    localStorage.setItem("name", document.getElementById("name").value);
+    localStorage.setItem("age", document.getElementById("age").value);
+    localStorage.setItem("height", document.getElementById("height").value);
+    localStorage.setItem("weight", document.getElementById("weight").value);
+    //window.location.href = ""
+}
