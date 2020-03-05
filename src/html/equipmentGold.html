@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page title</title>
+        <script src="../js/equipmentGold.js"></script>
+    </head>
+<body onload="loadLinks()">
+    <h1>DnD 5e Character Creator</h1>
+    <p><b>Equipment</b></p>
+    <p id="equipText">Enter the equipment you get from class based on the first link below. Find the specifics on weapons from the second link below. Find the specifics for armor and shields from the third link below.</p>
+    <a id="equipClass" href="" target="_blank">Class Equipment</a><br><br>
+    <a id="weapLink" href="http://dnd5e.wikidot.com/weapons" target="_blank">Weapon Information</a><br><br>
+    <a id="armorLink" href="http://dnd5e.wikidot.com/armor" target="_blank">Armor Information</a><br><br>
+    <input id="clEquip" name="clEquip" value="">
+    <p><b>Gold</b></p>
+    <p id="goldText">Calculate your gold by rolling a _DICE based on class and then add _GOLD GP based on your background.</p>
+    <input id="gold" name="gold" value=""><br><br>
+    <input type="button" onclick="saveEquipGold()" value="Submit">
+</body>
+</html>
