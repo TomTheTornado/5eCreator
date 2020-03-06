@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Page Title</title>
-
+    <head>
+        <title>Page Title</title>
+        <link href="css/main.css" rel="stylesheet" type="text/css" />
+        <!--js-->
+        <script src="./js/main.js"></script>
 </head>
 <body>
 
 <h1>DnD 5e Character Creator</h1>
 <form id="charOverview">
     <p><b>Choose your character level. (Working on support for higher levels).</b></p>
-    <select id="level" name="level">
+    <select id="level" class="dropdown" name="level">
         <option value=0>1</option>
     </select> 
     <p><b>Choose the race of your character.</b></p>
-    <select id="race" name="race" onchange="chooseSubrace()">
+    <select id="race" class="dropdown" name="race" onchange="chooseSubrace()">
         <option value=""></option>
         <option value="dwarf">Dwarf</option>
         <option value="elf">Elf</option>
@@ -28,7 +30,7 @@
     <p id="dwarfSub" style="display:none">Choose dwarf sub-race.
         <br>
         <br>
-        <select id="subDwarf" name="subDwarf">
+        <select id="subDwarf" class="dropdown" name="subDwarf">
             <option value=""></option>
             <option value="hillDwarf">Hill Dwarf</option>
             <option value="mountainDwarf">Mountain Dwarf</option>
@@ -37,7 +39,7 @@
     <p id="elfSub" style="display:none">Choose elf sub-race.
         <br>
         <br>
-        <select id="subElf" name="subElf">
+        <select id="subElf" class="dropdown" name="subElf">
             <option value=""></option>
             <option value="highElf">High Elf</option>
             <option value="woodElf">Wood Elf</option>
@@ -47,7 +49,7 @@
     <p id="halflingSub" style="display:none">Choose halfling sub-race.
         <br>
         <br>
-        <select id="subHalfling" name="subHalfling">
+        <select id="subHalfling" class="dropdown" name="subHalfling">
             <option value=""></option>
             <option value="lightHalfling">Lightfoot Halfling</option>
             <option value="stoutHalfling">Stout Halfling</option>
@@ -56,14 +58,14 @@
     <p id="gnomeSub" style="display:none">Choose gnome sub-race.
         <br>
         <br>
-        <select id="subGnome" name="subGnome">
+        <select id="subGnome" class="dropdown" name="subGnome">
             <option value=""></option>
             <option value="forestGnome">Forest Gnome</option>
             <option value="rockGnome">Rock Gnome</option>
         </select>
     </p>
     <p><b>Choose the class of your character.</b></p>
-    <select id="chtrClass" name="chtrClass">
+    <select id="chtrClass" class="dropdown" name="chtrClass">
         <option value=""></option>
         <option value="barbarian">Barbarian</option>
         <option value="bard">Bard</option>
@@ -79,7 +81,7 @@
         <option value="wizard">Wizard</option>
     </select>
     <p><b>Choose the background for your character.</b></p>
-    <select id="background" name="background">
+    <select id="background" class="dropdown" name="background">
         <option value=""></option>
         <option value="acolyte">Acolyte</option>
         <option value="charlatan">Charlatan</option>
@@ -97,9 +99,7 @@
     </select> 
     <br>
     <br>
-    <input type="button" onclick="checkAttributes()" value="Submit">
+    <input type="button" class="button" onclick="checkAttributes()" value="Submit"><br><br>
 </form>
-    <!--js-->
-    <script src="./js/main.js"></script>
 </body>
 </html> 
