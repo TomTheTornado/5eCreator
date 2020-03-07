@@ -9,6 +9,8 @@ font-family: 'Futura', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', '
     color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
     text-shadow: 3px 3px 0 #352700;
+    margin-right: 6vw;
+    margin-left: 6vw;
   }
 
 html select{
@@ -20,6 +22,13 @@ html select{
 
 html a{
     color: #28eb21;
+}
+
+
+html hr {
+    border: 0;
+    height: 3px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
 .jsInput{

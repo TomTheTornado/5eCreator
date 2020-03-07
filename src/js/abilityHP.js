@@ -16,7 +16,7 @@ function chosenScores(){
     var para = document.createElement("p");
     var node = document.createTextNode(raceIncr);
     para.appendChild(node);
-    if(subRace != ""){
+    if(subRace != "" && subRace != "none"){
         var subRaceIncr = " Being a " + subRaceScoreIncrease();
         node = document.createTextNode(subRaceIncr);
         para.appendChild(node);
