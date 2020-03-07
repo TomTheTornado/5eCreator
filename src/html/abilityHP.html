@@ -9,12 +9,12 @@
     <form>
         <p><b>Ability Scores</b></p>
         <div id="div1"></div>
-        <p>Strength <input type="text" id="strScore" oninput="updateScoreMod()" value=> &nbsp;&nbsp;&nbsp;&nbsp; Str Mod: <span id="strMod"></span></p>
-        <p>Dexterity <input type="text" id="dexScore" oninput="updateScoreMod()" value=>  &nbsp;&nbsp;&nbsp;&nbsp; Dex Mod: <span id="dexMod"></span></p>
-        <p>Constitution <input type="text" id="conScore" oninput="updateScoreMod();getLvl1HP()" value=> &nbsp;&nbsp;&nbsp;&nbsp; Con Mod: <span id="conMod"></span></p>
-        <p>Intelligence <input type="text" id="intScore" oninput="updateScoreMod()" value=> &nbsp;&nbsp;&nbsp;&nbsp; Int Mod: <span id="intMod"></span></p>
-        <p>Wisdom <input type="text" id="wisScore" oninput="updateScoreMod()" value=> &nbsp;&nbsp;&nbsp;&nbsp; Wis Mod: <span id="wisMod"></span></p>
-        <p>Charisma <input type="text" id="chaScore" oninput="updateScoreMod()" value=> &nbsp;&nbsp;&nbsp;&nbsp; Cha Mod: <span id="chaMod"></span></p>
+        <p>Strength <input type="text" class="jsInput" id="strScore" oninput="updateScoreMod()" value=> &nbsp;&nbsp;&nbsp;&nbsp; Str Mod: <span id="strMod"></span></p>
+        <p>Dexterity <input type="text" class="jsInput" id="dexScore" oninput="updateScoreMod()" value=>  &nbsp;&nbsp;&nbsp;&nbsp; Dex Mod: <span id="dexMod"></span></p>
+        <p>Constitution <input type="text" class="jsInput" id="conScore" oninput="updateScoreMod();getLvl1HP()" value=> &nbsp;&nbsp;&nbsp;&nbsp; Con Mod: <span id="conMod"></span></p>
+        <p>Intelligence <input type="text" class="jsInput" id="intScore" oninput="updateScoreMod()" value=> &nbsp;&nbsp;&nbsp;&nbsp; Int Mod: <span id="intMod"></span></p>
+        <p>Wisdom <input type="text" class="jsInput" id="wisScore" oninput="updateScoreMod()" value=> &nbsp;&nbsp;&nbsp;&nbsp; Wis Mod: <span id="wisMod"></span></p>
+        <p>Charisma <input type="text" class="jsInput" id="chaScore" oninput="updateScoreMod()" value=> &nbsp;&nbsp;&nbsp;&nbsp; Cha Mod: <span id="chaMod"></span></p>
         <br>
 
         <p><b>Base Hit Points at Level 1</b></p>
@@ -22,7 +22,7 @@
         <p>HP at Level 1: <span id="baseHP" value=></span></p>
         <br>
         <br>
-        <input type="button" onclick="saveAbilityHP()" value="Submit">
+        <input type="button" class="button" onclick="saveAbilityHP()" value="Submit">
     </form>
 </body>
     <script src="../js/abilityHP.js"></script>

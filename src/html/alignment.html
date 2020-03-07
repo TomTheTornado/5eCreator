@@ -9,7 +9,7 @@
     <h1>DnD 5e Character Creator</h1>
     <form>
         <p><b>Alignment </b></p>
-            <select id="alignment" name="alignment">
+            <select id="alignment" class="dropdown" name="alignment">
                 <option value=""></option>
                 <option value="Lawful Good">Lawful Good</option>
                 <option value="Neutral Good">Neutral Good</option>
@@ -29,15 +29,15 @@
         <p id="exRollName" name="exRollName">Extra Roll</p>
             <input id="exRoll" name="exRoll" value="">
         <p>Personality Trait</p>
-            <input id="trait" name="trait" value="">
+            <input id="trait" class="jsInput" name="trait" value="">
         <p>Ideal</p>
-            <input id="ideal" name="ideal" value="">
+            <input id="ideal" class="jsInput" name="ideal" value="">
         <p>Bond</p>
-            <input id="bond" name="bond" value="">
+            <input id="bond" class="jsInput" name="bond" value="">
         <p>Flaw</p>
-            <input id="flaw" name="flaw" value="">
-        <br>
-        <input type="button" onclick="saveCharacteristics()" value="Submit">
+            <input id="flaw" class="jsInput" name="flaw" value="">
+        <br><br>
+        <input type="button" class="button" onclick="saveCharacteristics()" value="Submit">
     </form>
 </body>
     

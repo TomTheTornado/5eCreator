@@ -5,17 +5,27 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 font-family: 'Futura', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin: auto;
     text-align: center;
-    font-size: 4vh;
+    font-size: 2.5vh;
     color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
     text-shadow: 3px 3px 0 #352700;
   }
 
-.dropdown{
-    width: 25vw;
-    height: 5vh;
-    font-size: 3vh;
+html select{
+    width: 30vw;
+    height: 4vh;
+    font-size: 2.5vh;
     text-align: center;
+}
+
+html a{
+    color: #28eb21;
+}
+
+.jsInput{
+    width: 30vw;
+    height: 4vh;
+    font-size: 2.5vh;
 }
 
 .button{
@@ -26,7 +36,7 @@ font-family: 'Futura', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', '
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 4vh;
+    font-size: 2.5vh;
     box-shadow: 2px 2px 0 #000000;
 }
 
@@ -34,4 +44,5 @@ font-family: 'Futura', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', '
     background-color: #352700;
     color: #727272;
     box-shadow: 1px 1px 0 #000000;
+    cursor: pointer;
 }

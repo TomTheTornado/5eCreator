@@ -34,6 +34,7 @@ function chosenAttributes(){
     }
     var element = document.getElementById("div2");
     element.appendChild(para);
+
     if(exRaceLang() + exBackLang() > 0){
         exLangFields();
     }
@@ -49,6 +50,7 @@ function exLangFields(){
         element.appendChild(para);
         document.getElementById("div2").innerHTML += "<input type=\"text\"" + " id=exLang" + (i+1) +" value=\"\">";
         document.getElementById("div2").innerHTML += "<br>";
+        document.getElementById("exLang" + (i+1) + "").classList.add("jsInput");
     }
 }
 
@@ -61,6 +63,7 @@ function classProfFields(){
         element.appendChild(para);
         document.getElementById("div1").innerHTML += "<input type=\"text\"" + " id=cProf" + (i+1) +" value=\"\">";
         document.getElementById("div1").innerHTML += "<br>";
+        document.getElementById("cProf" + (i+1) + "").classList.add("jsInput");
     }
 }
 
